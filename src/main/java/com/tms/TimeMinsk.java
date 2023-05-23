@@ -18,7 +18,6 @@ import java.time.format.DateTimeFormatter;
 public class TimeMinsk extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         ZoneId zone = ZoneId.of("Europe/Minsk");
         ZonedDateTime currentTime = ZonedDateTime.now(zone);
         LocalTime localCurrentTime = currentTime.toLocalTime();
@@ -27,6 +26,5 @@ public class TimeMinsk extends HttpServlet {
         PrintWriter printWriter = resp.getWriter();
         printWriter.println("<h1> Время в Минске: " + localCurrentTime.format(DateTimeFormatter.ofPattern("HH:mm:ss")) + "</h1>");
         printWriter.close();
-
     }
 }

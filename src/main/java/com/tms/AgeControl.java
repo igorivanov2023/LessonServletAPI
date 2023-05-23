@@ -15,7 +15,6 @@ public class AgeControl extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         String parameterAge = req.getParameter("age");
 
         resp.setContentType("text/html");
@@ -34,6 +33,5 @@ public class AgeControl extends HttpServlet {
         }
 
         printWriter.close();
-
     }
 }
